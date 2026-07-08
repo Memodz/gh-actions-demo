@@ -2,12 +2,12 @@ name: Workflow for Feature Branch
 
 on:
   push:
-    branches:
-      - 'feature/**' 
+    branches: # แก้สระเป็น e ให้ถูกต้อง
+      - 'feature/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps: 
-      - name: Check new feature quality 
-        run: echo "Checking the quality of the new feature branch"
+    steps:
+      - name: Check new feature quality # เคาะเว้นวรรคหลังเครื่องหมายลบ 1 ครั้ง
+        run: echo "Checking the quality of the new feature branch" # เยื้องให้ตรงกับตัว n ด้านบน
