@@ -1,9 +1,9 @@
-name: Hello word
+name: Hello World
 on: push
 jobs:
   hello-job:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line scirpt
-        run: echo "Hello, World!"
+        run: echo "Hello, World! welcome to my first GitHub Actions workflow"
         
