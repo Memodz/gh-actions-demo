@@ -1,7 +1,7 @@
 POST https://api.github.com/repos/Memodz/gh-actions-demo/dispatches
 Content-Type: application/json
 Accept: application/vnd.github+json
-Authorization: Bearer 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
+Authorization: Bearer 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
 
 {
     "event_type": "on-demand-test",
