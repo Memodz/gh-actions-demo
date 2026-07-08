@@ -1,10 +1,8 @@
 name: Workflow for Feature Branch
-
 on:
   push:
     branches: # แก้สระเป็น e ให้ถูกต้อง
       - 'feature/**'
-
 jobs:
   build:
     runs-on: ubuntu-latest
