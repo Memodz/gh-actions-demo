@@ -36,6 +36,7 @@ jobs:
           echo "This branch is ${{ github.ref_name }}"
           echo "This is a ${{env.APP_NAME}} Version ${{env.APP_VERSION}}"
           echo "Runner Context: ${{ env.RUNNER_CONTEXT }}"
+          echo "Database Password: ${{ secrets.DB_PASSWORD }}"
   hello-job:
     runs-on: ubuntu-latest
     steps:
