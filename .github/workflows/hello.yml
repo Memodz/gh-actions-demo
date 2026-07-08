@@ -10,4 +10,10 @@ jobs:
     steps:
       - name: Run a one-line script
         run: echo "Hello, World! welcome to my first GitHub Actions workflow"
+  second-job:
+    runs-on: windows-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          echo "This job runs on ${{runner.os}}"
         
