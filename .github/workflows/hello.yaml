@@ -22,6 +22,7 @@ jobs:
       - name: Echo environment variables
         env:
           APP_VERSION: "1.0.0"
+          RUNNER_CONTEXT: ${{ toJSON(runner) }}
         run: | #mulit-line
           echo "This Repository is ${{ github.repository }}"
           echo "Event Name: ${{ github.event_name }}"
@@ -34,6 +35,7 @@ jobs:
           echo "Job Status: ${{ job.status }}"
           echo "This branch is ${{ github.ref_name }}"
           echo "This is a ${{env.APP_NAME}} Version ${{env.APP_VERSION}}"
+          echo "Runner Context: ${{ env.RUNNER_CONTEXT }}"
   hello-job:
     runs-on: ubuntu-latest
     steps:
