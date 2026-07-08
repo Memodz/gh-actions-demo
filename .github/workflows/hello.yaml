@@ -38,6 +38,7 @@ jobs:
           echo "Runner Context: ${{ env.RUNNER_CONTEXT }}"
           echo "Database Password: ${{ secrets.DB_PASSWORD }}"
   hello-job:
+    if: ${{ github.event_name != 'on-demand-test' }}
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
@@ -45,8 +46,11 @@ jobs:
       - name: Retrieve client payload
         run: echo "Client sent payload ${{ github.event.client_payload.status }}"
   second-job:
+    if: ${{ github.event_name != 'on-demand-test' }}
     runs-on: windows-latest
+    needs: hello-job
     steps:
-      - name: Run a multi-line script
-        run: echo "This job runs on ${{runner.os}}"
+      - run: echo "This job runs on ${{runner.os}}"
+        if: ${{ runner.os == 'linux' }}
+
         
