@@ -1,0 +1,9 @@
+name: Hello word
+on: push
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line scirpt
+        run: echo "Hello, World!"
+        
