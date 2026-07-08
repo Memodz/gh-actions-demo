@@ -17,7 +17,7 @@ jobs:
       - name: Run a one-line script
         run: echo "Hello, World! welcome to my first GitHub Actions workflow"
       - name: Retrieve client payload
-        run: echo "Client sent payload ${{ toJson(github.event.client_payload) }}"
+        run: echo "Client sent payload ${{github.event.client_payload}}"
   second-job:
     runs-on: windows-latest
     steps:
