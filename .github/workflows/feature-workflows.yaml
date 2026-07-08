@@ -6,9 +6,7 @@ jobs:
   build:
     runs-on : ubuntu-latest
   steps:
-    -name: Check new featur quality
-<<<<<<< HEAD
+    -name: Check new feature quality
      run: echo "Checking the quality of the new feature branch"
-=======
-     run: echo "Checking the quality of the new feature branch"
->>>>>>> 8c0a63c (add feature branch)
+
+
