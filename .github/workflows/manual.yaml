@@ -1,0 +1,14 @@
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@7.0.0
+        with:
+          repository: ${{ github.repository }}
+          ref: ${{ github.ref_main }}
+      - name: List files in workspace
+        run: ls ${{ github.workspace }}
+        
